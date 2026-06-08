@@ -86,6 +86,13 @@ const LeafIcon = () => (
   </svg>
 )
 
+const VerifiedIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+    <circle cx="12" cy="12" r="10" fill="#27AE60" />
+    <path d="M8 12.5l2.5 2.5 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
 // ── Floating stat chip ─────────────────────────────────────────────────────────
 function StatChip({ Icon, value, label, className = '' }: {
   Icon: () => ReactElement; value: string; label: string; className?: string
@@ -231,10 +238,11 @@ export default function Hero() {
           {/* ── Right: Phone Mockup ──────────────────────────────────────── */}
           <div className="flex-shrink-0 relative w-72 h-[580px] lg:w-80 lg:h-[640px]">
             {/* Floating stat chips */}
-            <StatChip Icon={FlameIcon}    value="1,840"  label="kcal today"  className="float-1 -left-10 top-16 z-20" />
-            <StatChip Icon={DumbbellIcon} value="142g"   label="protein"     className="float-2 -right-8 top-1/3 z-20" />
-            <StatChip Icon={TargetIcon}   value="Day 14" label="streak"      className="float-3 -left-6 bottom-28 z-20" />
-            <StatChip Icon={CheckIcon}    value="On track" label="macro goals" className="float-4 -right-4 bottom-16 z-20" />
+            <StatChip Icon={FlameIcon}    value="1,840"    label="kcal today"  className="float-1 -left-10 top-16 z-20" />
+            <StatChip Icon={DumbbellIcon} value="142g"     label="protein"     className="float-2 -right-8 top-1/3 z-20" />
+            <StatChip Icon={TargetIcon}   value="Day 14"   label="streak"      className="float-3 -left-6 bottom-28 z-20" />
+            <StatChip Icon={VerifiedIcon} value="Verified" label="AU food data" className="float-1 -right-8 bottom-44 z-20" />
+            <StatChip Icon={CheckIcon}    value="On track" label="macro goals"  className="float-4 -right-4 bottom-16 z-20" />
 
             {/* Soft glow behind phone */}
             <div
